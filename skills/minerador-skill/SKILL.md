@@ -2,42 +2,60 @@
 name: Minerador - Offer Research and Validation
 description: >
   Procedimentos para minerar, analisar e validar ofertas de alta conversão no mercado brasileiro.
-  Utiliza scripts Python locais para integração com Scrape Creators e persistência no Supabase.
 version: "1.0.0"
 ---
 
 # Minerador — High-Performance Offer Research and Validation
 
+
 Sua missão principal é minerar, analisar e validar ofertas de alta conversão (infoprodutos, VSLs e funis híbridos) que estão escalando no mercado digital brasileiro. O objetivo é identificar estratégias comprovadas para modelagem rápida.
 
----
+
 
 ## 🛠 INTEGRAÇÃO TÉCNICA E EXECUÇÃO
 
-Esta skill requer a execução de scripts Python localizados na pasta `scripts/`. Você deve utilizar as variáveis de ambiente `SCRAPECREATORS_API_KEY`, `SUPABASE_URL` e `SUPABASE_KEY`.
+Esta skill requer a execução de scripts Python localizados na pasta `scripts/` para processar os dados minerados. Você deve utilizar as variáveis de ambiente SCRAPECREATORS_API_KEY, SUPABASE_URL e SUPABASE_KEY.
 
-### 1. Coleta de Dados (Scouting)
-Utilize o script `scripts/scrape_meta_ads.py` para consultar a Meta Ad Library via API Scrape Creators.
-- **Ação:** Execute o script para buscar anúncios ativos no Brasil.
-- **Parâmetros padrão:** `country: BR`, `platform: facebook`, `active_duration_min: 7`.
+### 1. Fluxo de Trabalho do Agente
+Você deve realizar **duas rodadas separadas** de mineração utilizando o terminal para executar os scripts Python. Siga os comandos exatos:
 
-### 2. Validação e Persistência (Supabase)
-Após validar uma oferta, utilize o script `scripts/process_and_save_offer.py` para salvar os dados na tabela `ads_minerados`.
-- **Ação:** Processe o JSON da oferta e envie para o banco de dados para rastreamento histórico.
+#### Rodada 1: Dropshipping e E-commerce Físico
+1. **Coleta:** Execute no terminal: 
+   `python scripts/scrape_meta_ads.py --keywords "Frete Grátis" --output raw_drop.json`
+2. **Processamento e Gravação:** Execute no terminal:
+   `python scripts/process_and_save_offer.py --input raw_drop.json --category Dropshipping`
 
----
+#### Rodada 2: Infoprodutos e Low-Ticket Digital
+1. **Coleta:** Execute no terminal:
+   `python scripts/scrape_meta_ads.py --keywords "E-book, Acesso Imediato, Download, Masterclass" --output raw_digital.json`
+2. **Processamento e Gravação:** Execute no terminal:
+   `python scripts/process_and_save_offer.py --input raw_digital.json --category InfoProduto`
 
-## 📊 FRAMEWORK DE MINERAÇÃO E VALIDAÇÃO
+### 2. Parâmetros da API Scrape Creators
+Os scripts já configuram automaticamente os seguintes parâmetros base:
+- `country`: `BR`
+- `platform`: `facebook`
+- `active_duration_min`: `7` (mínimo de 7 dias ativo)
+- `collation_count_min`: `10` (mínimo de 10 compartilhamentos/colisões)
+📊 FRAMEWORK DE MINERAÇÃO E VALIDAÇÃO
 
-### 1. Critérios de Validação Estritos
+1. Critérios de Validação Estritos
+
 Uma oferta só é considerada validada se atender aos seguintes requisitos processados pelos scripts:
-- **Anúncio Durável:** Ativo por pelo menos 7 a 10 dias consecutivos.
-- **Mecanismo Único:** Promessa de solução rápida através de um método exclusivo.
-- **Página de Vendas:** Presença de VSL de alta retenção e checkout limpo.
 
----
+•
+Anúncio Durável: Ativo por pelo menos 7 a 10 dias consecutivos.
 
-## 🧠 MINDSET DO AGENTE
+•
+Mecanismo Único: Promessa de solução rápida através de um método exclusivo.
+
+•
+Página de Vendas: Presença de VSL de alta retenção e checkout limpo.
+
+
+
+
+🧠 MINDSET DO AGENTE
 
 Você não analisa produtos com base em gosto pessoal. Você analisa números, sinais de tração do algoritmo, volume de anúncios e tempo de permanência ativa no mercado. Use os scripts Python para garantir que a pontuação seja matemática e isenta de viés.
 
