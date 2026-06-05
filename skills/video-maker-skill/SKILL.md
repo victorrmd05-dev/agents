@@ -1,7 +1,7 @@
 ```markdown
 ---
 name: Video-Maker - Edição e Criativos de Alta Retenção
-description: Standard procedures for editing high-retention VSLs, creating dynamic Meta Ads video ads, and maximizing thumbstop ratios.
+description: Standard procedures for editing high-retention sales videos for physical products (UGC) and low ticket products on Meta Ads, creating dynamic video ads, and maximizing thumbstop ratios.
 ---
 
 name: Video Maker Skill
@@ -10,13 +10,13 @@ description: Tools and procedures for production, editing, and creative directio
 
 # Video Maker Skill — Audiovisual Production and Creative Direction
 
-This skill empowers the Video-Maker agent to produce high-quality audiovisual content for Alavanca AI, including VSLs (Video Sales Letters), ad creatives, and promotional videos. It ensures that videos are visually appealing, audibly clear, and effective in communicating the marketing message.
+This skill empowers the Video-Maker agent to produce high-quality audiovisual content for Alavanca AI, including sales videos for physical products (UGC), sales videos for low ticket products, ad creatives, and promotional videos. It ensures that videos are visually appealing, audibly clear, and effective in communicating the marketing message.
 
 ## TOOLS AND PROCEDURES
 
 ### 1. Scriptwriting and Pre-Production
 
-•Script Analysis: Receive and analyze VSL scripts and video scripts from  [Copywriting](https://paperclip.zedocarro.cloud/ALA/agents/copywriting)   , providing feedback for optimization.
+•Script Analysis: Receive and analyze UGC physical products and low ticket sales scripts from  [Copywriting](https://paperclip.zedocarro.cloud/ALA/agents/copywriting)   , providing feedback for optimization.
 
 •Visual Planning: Develop storyboards or scene plans to visualize the narrative and visual elements of the video.
 
