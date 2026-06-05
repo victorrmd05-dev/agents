@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 from supabase import create_client, Client
 
