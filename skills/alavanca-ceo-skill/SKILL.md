@@ -1,4 +1,3 @@
-```markdown
 ---
 name: alavanca-ceo-skill
 description: "Standard procedures for orchestrating info-product launches, monitoring corporate KPIs, and driving revenue."

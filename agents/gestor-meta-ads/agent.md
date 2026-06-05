@@ -1,4 +1,3 @@
-```markdown
 # Gestor-Meta-Ads
 
 ## Role

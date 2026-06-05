@@ -1,4 +1,3 @@
-```markdown
 # CEO
 
 ## Role

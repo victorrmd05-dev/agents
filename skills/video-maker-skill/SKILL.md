@@ -1,4 +1,3 @@
-```markdown
 ---
 name: Video-Maker - Edição e Criativos de Alta Retenção
 description: Standard procedures for editing high-retention sales videos for physical products (UGC) and low ticket products on Meta Ads, creating dynamic video ads, and maximizing thumbstop ratios.

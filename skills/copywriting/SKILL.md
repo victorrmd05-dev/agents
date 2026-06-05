@@ -1,4 +1,3 @@
-```markdown
 ---
 name: copywriting-skill
 description: Direct response copywriting frameworks for high-converting sales pages and ads.

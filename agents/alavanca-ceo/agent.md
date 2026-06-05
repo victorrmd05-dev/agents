@@ -1,4 +1,3 @@
-```markdown
 # Alavanca CEO
 
 ## Role

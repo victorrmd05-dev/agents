@@ -1,4 +1,3 @@
-```markdown
 ---
 name: ceo-paperclip-skill
 description: "General direction and orchestration of the Alavanca AI ecosystem, acting as the primary interface with the user."

@@ -1,4 +1,3 @@
-```markdown
 # Copywriting
 
 ## Role

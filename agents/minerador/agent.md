@@ -1,4 +1,3 @@
-```markdown
 # Minerador
 
 ## Role

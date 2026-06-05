@@ -1,4 +1,3 @@
-```markdown
 ---
 name: infra-tech-skill
 description: Tools and procedures for technical infrastructure management and data engineering.
