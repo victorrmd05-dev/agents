@@ -1,61 +1,51 @@
 ---
 name: Minerador - Offer Research and Validation
-description: >
-  Procedimentos para minerar, analisar e validar ofertas de alta conversão no mercado brasileiro.
+description: Procedures for mining, analyzing, and validating high-conversion offers in the Brazilian market.
 version: "1.0.0"
 ---
 
 # Minerador — High-Performance Offer Research and Validation
 
+Your primary mission is to mine, analyze, and validate high-conversion offers (infoproducts, VSLs, and hybrid funnels) that are currently scaling in the Brazilian digital market. The objective is to identify proven strategies for rapid modeling.
 
-Sua missão principal é minerar, analisar e validar ofertas de alta conversão (infoprodutos, VSLs e funis híbridos) que estão escalando no mercado digital brasileiro. O objetivo é identificar estratégias comprovadas para modelagem rápida.
+## 🛠 TECHNICAL INTEGRATION AND EXECUTION
 
+This skill requires the execution of Python scripts located in the `scripts/` folder to process the mined data. You must use the environment variables `SCRAPECREATORS_API_KEY`, `SUPABASE_URL`, and `SUPABASE_KEY`.
 
+### 1. Agent Workflow
 
-## 🛠 INTEGRAÇÃO TÉCNICA E EXECUÇÃO
+You must perform **two separate rounds** of mining using the terminal to execute the Python scripts. Follow the exact commands:
 
-Esta skill requer a execução de scripts Python localizados na pasta `scripts/` para processar os dados minerados. Você deve utilizar as variáveis de ambiente SCRAPECREATORS_API_KEY, SUPABASE_URL e SUPABASE_KEY.
+#### Round 1: Dropshipping and Physical E-commerce
+1.  **Collection:** Execute in the terminal: 
+    `python scripts/scrape_meta_ads.py --keywords "Frete Grátis" --output raw_drop.json`
+2.  **Processing and Saving:** Execute in the terminal:
+    `python scripts/process_and_save_offer.py --input raw_drop.json --category Dropshipping`
 
-### 1. Fluxo de Trabalho do Agente
-Você deve realizar **duas rodadas separadas** de mineração utilizando o terminal para executar os scripts Python. Siga os comandos exatos:
+#### Round 2: Infoproducts and Low-Ticket Digital
+1.  **Collection:** Execute in the terminal:
+    `python scripts/scrape_meta_ads.py --keywords "E-book, Acesso Imediato, Download, Masterclass" --output raw_digital.json`
+2.  **Processing and Saving:** Execute in the terminal:
+    `python scripts/process_and_save_offer.py --input raw_digital.json --category InfoProduto`
 
-#### Rodada 1: Dropshipping e E-commerce Físico
-1. **Coleta:** Execute no terminal: 
-   `python scripts/scrape_meta_ads.py --keywords "Frete Grátis" --output raw_drop.json`
-2. **Processamento e Gravação:** Execute no terminal:
-   `python scripts/process_and_save_offer.py --input raw_drop.json --category Dropshipping`
+### 2. Scrape Creators API Parameters
 
-#### Rodada 2: Infoprodutos e Low-Ticket Digital
-1. **Coleta:** Execute no terminal:
-   `python scripts/scrape_meta_ads.py --keywords "E-book, Acesso Imediato, Download, Masterclass" --output raw_digital.json`
-2. **Processamento e Gravação:** Execute no terminal:
-   `python scripts/process_and_save_offer.py --input raw_digital.json --category InfoProduto`
-
-### 2. Parâmetros da API Scrape Creators
-Os scripts já configuram automaticamente os seguintes parâmetros base:
+The scripts automatically configure the following base parameters:
 - `country`: `BR`
 - `platform`: `facebook`
-- `active_duration_min`: `7` (mínimo de 7 dias ativo)
-- `collation_count_min`: `10` (mínimo de 10 compartilhamentos/colisões)
-📊 FRAMEWORK DE MINERAÇÃO E VALIDAÇÃO
+- `active_duration_min`: `7` (minimum 7 days active)
+- `collation_count_min`: `10` (minimum 10 shares/engagements)
 
-1. Critérios de Validação Estritos
+## 📊 MINING AND VALIDATION FRAMEWORK
 
-Uma oferta só é considerada validada se atender aos seguintes requisitos processados pelos scripts:
+### 1. Strict Validation Criteria
 
-•
-Anúncio Durável: Ativo por pelo menos 7 a 10 dias consecutivos.
+An offer is only considered validated if it meets the following requirements, processed by the scripts:
 
-•
-Mecanismo Único: Promessa de solução rápida através de um método exclusivo.
+*   **Durable Ad:** Active for at least 7 to 10 consecutive days.
+*   **Unique Mechanism:** Promise of a quick solution through an exclusive method.
+*   **Sales Page:** Presence of a high-retention VSL and a clean checkout.
 
-•
-Página de Vendas: Presença de VSL de alta retenção e checkout limpo.
+## 🧠 AGENT MINDSET
 
-
-
-
-🧠 MINDSET DO AGENTE
-
-Você não analisa produtos com base em gosto pessoal. Você analisa números, sinais de tração do algoritmo, volume de anúncios e tempo de permanência ativa no mercado. Use os scripts Python para garantir que a pontuação seja matemática e isenta de viés.
-
+You do not analyze products based on personal taste. You analyze numbers, signs of algorithm traction, ad volume, and active market presence duration. Use the Python scripts to ensure the scoring is mathematical and free from bias.
