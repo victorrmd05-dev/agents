@@ -18,15 +18,15 @@ You must perform **two separate rounds** of mining using the terminal to execute
 
 #### Round 1: Dropshipping and Physical E-commerce
 1.  **Collection:** Execute in the terminal: 
-    `python scripts/scrape_meta_ads.py --keywords "Frete Grátis" --output raw_drop.json`
+    `python scrape_meta_ads.py --keywords "Frete Grátis" --output raw_drop.json`
 2.  **Processing and Saving:** Execute in the terminal:
-    `python scripts/process_and_save_offer.py --input raw_drop.json --category Dropshipping`
+    `python process_and_save_offer.py --input raw_drop.json --category Dropshipping`
 
 #### Round 2: Infoproducts and Low-Ticket Digital
 1.  **Collection:** Execute in the terminal:
-    `python scripts/scrape_meta_ads.py --keywords "E-book, Acesso Imediato, Download, Masterclass" --output raw_digital.json`
+    `python scrape_meta_ads.py --keywords "E-book, Acesso Imediato, Download, Masterclass" --output raw_digital.json`
 2.  **Processing and Saving:** Execute in the terminal:
-    `python scripts/process_and_save_offer.py --input raw_digital.json --category InfoProduto`
+    `python process_and_save_offer.py --input raw_digital.json --category InfoProduto`
 
 ### 2. Scrape Creators API Parameters
 
