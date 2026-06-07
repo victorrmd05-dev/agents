@@ -11,5 +11,5 @@ def save_offer_to_supabase(offer_data):
         supabase.table("ads_minerados").insert(offer_data).execute()
         return True
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Erro: {e}")
         return False

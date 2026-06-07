@@ -13,5 +13,5 @@ def scrape_meta_ads(api_key, country='BR', platform='facebook', active_duration_
         response.raise_for_status()
         return response.json()
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Erro: {e}")
         return None
