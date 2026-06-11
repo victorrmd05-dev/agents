@@ -17,7 +17,10 @@
 		{"id":"97ecea433d1bc8c7","type":"file","file":"skills/webmaster-skill/SKILL.md","x":560,"y":880,"width":400,"height":400,"color":"2"},
 		{"id":"9fc3d2619e93bfbd","type":"file","file":"skills/video-maker-skill/SKILL.md","x":1240,"y":880,"width":400,"height":400,"color":"2"},
 		{"id":"366c5478c4b7c122","type":"file","file":"skills/alavanca-ceo-skill/SKILL.md","x":760,"y":-960,"width":400,"height":400,"color":"1"},
-		{"id":"0f0a2f0818c02eaa","type":"file","file":"skills/ceo-paperclip-skill/SKILL.md","x":760,"y":-1490,"width":400,"height":400,"color":"#9822d8"}
+		{"id":"0f0a2f0818c02eaa","type":"file","file":"skills/ceo-paperclip-skill/SKILL.md","x":760,"y":-1490,"width":400,"height":400,"color":"#9822d8"},
+		{"id":"6653af5536131534","x":-2160,"y":1600,"width":400,"height":400,"type":"file","file":"agents/cto/TOOLS.md"},
+		{"id":"4cd95210a7424523","x":1480,"y":-960,"width":400,"height":400,"type":"file","file":"agents/alavanca-ceo/SOUL.md"},
+		{"id":"7e4ce3cc299650b2","x":2160,"y":-960,"width":400,"height":400,"type":"file","file":"agents/alavanca-ceo/HEARTBEAT.md"}
 	],
 	"edges":[
 		{"id":"8e207aa2871b8f66","fromNode":"8e07172feeb6f7b0","fromSide":"bottom","toNode":"4e08ec2e1ba87c3f","toSide":"top"},
@@ -36,6 +39,9 @@
 		{"id":"a38c12c28648c524","fromNode":"0389e8767d50982e","fromSide":"bottom","toNode":"e9930c8350bd5d07","toSide":"top","color":"#2313cd"},
 		{"id":"1d9a7ced163df5ef","fromNode":"77807a024ea53b6a","fromSide":"bottom","toNode":"73f203a8ba4d8783","toSide":"top","color":"#2313cd"},
 		{"id":"5497f602dccafed4","fromNode":"2f47ecd177d771ba","fromSide":"bottom","toNode":"97ecea433d1bc8c7","toSide":"top","color":"#2313cd"},
-		{"id":"257ccbef26a62da4","fromNode":"536ba66635de476a","fromSide":"bottom","toNode":"9fc3d2619e93bfbd","toSide":"top","color":"#2313cd"}
+		{"id":"257ccbef26a62da4","fromNode":"536ba66635de476a","fromSide":"bottom","toNode":"9fc3d2619e93bfbd","toSide":"top","color":"#2313cd"},
+		{"id":"62146556fc6cea37","fromNode":"84fc26a156227a3c","fromSide":"bottom","toNode":"6653af5536131534","toSide":"top"},
+		{"id":"2b6e5b5c32f81a6c","fromNode":"366c5478c4b7c122","fromSide":"right","toNode":"4cd95210a7424523","toSide":"left"},
+		{"id":"2eb942a0e3139f86","fromNode":"4cd95210a7424523","fromSide":"right","toNode":"7e4ce3cc299650b2","toSide":"left"}
 	]
 }
