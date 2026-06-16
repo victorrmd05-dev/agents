@@ -3,6 +3,9 @@ name: Minerador - Pesquisa e Validação de Ofertas
 description: >
   Procedimentos para minerar, analisar e validar ofertas de alta conversão no mercado brasileiro.
 version: "1.0.0"
+scripts:
+  - scripts/process_and_save_offer.py
+  - scripts/scrape_meta_ads.py
 ---
 
 # Minerador — Pesquisa e Validação de Ofertas de Alta Performance
@@ -19,15 +22,15 @@ Você deve realizar **duas rodadas separadas** de mineração utilizando o termi
 
 #### Rodada 1: Dropshipping e E-commerce Físico
 1.  **Coleta:** Execute no terminal: 
-    `python scrape_meta_ads.py --keywords "Frete Grátis" --output raw_drop.json`
+    `python scripts/scrape_meta_ads.py --keywords "Frete Grátis" --output raw_drop.json`
 2.  **Processamento e Gravação:** Execute no terminal:
-    `python process_and_save_offer.py --input raw_drop.json --category Dropshipping`
+    `python scripts/process_and_save_offer.py --input raw_drop.json --category Dropshipping`
 
 #### Rodada 2: Infoprodutos e Low-Ticket Digital
 1.  **Coleta:** Execute no terminal:
-    `python scrape_meta_ads.py --keywords "E-book, Acesso Imediato, Download, Masterclass" --output raw_digital.json`
+    `python scripts/scrape_meta_ads.py --keywords "E-book, Acesso Imediato, Download, Masterclass" --output raw_digital.json`
 2.  **Processamento e Gravação:** Execute no terminal:
-    `python process_and_save_offer.py --input raw_digital.json --category InfoProduto`
+    `python scripts/process_and_save_offer.py --input raw_digital.json --category InfoProduto`
 
 ### 2. Parâmetros da API Scrape Creators
 
