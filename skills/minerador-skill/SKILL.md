@@ -3,7 +3,7 @@ name: Minerador - Pesquisa e Validação de Ofertas
 description: >
   Procedimentos para minerar, analisar e validar ofertas de alta conversão no mercado brasileiro.
 version: "1.0.0"
-trustLevel: full_access
+trustLevel: standard
 scripts:
   - scripts/process_and_save_offer.py
   - scripts/scrape_meta_ads.py
