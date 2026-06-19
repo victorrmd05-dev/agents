@@ -88,7 +88,7 @@ Ao gerar código Tailwind CSS, publicar no Cloudflare Pages ou criar landing pag
 ## 4. Integração e Publicação (Cloudflare)
 
 Além da criação de código, o Webmaster deve:
-- **Cloudflare**: Configurar e formatar corretamente sites e aplicações estáticas, publicando via Wrangler CLI no Cloudflare Pages ou Workers.
+- **Cloudflare**: Configurar e formatar corretamente sites e aplicações estáticas, publicando via Wrangler CLI no Cloudflare Pages ou Workers. **Regras Críticas de Deploy (Evitar Erro 404)**: O arquivo principal da landing page DEVE se chamar obrigatoriamente `index.html` (com todas as letras estritamente em minúsculo). Nunca faça deploy de arquivos soltos; crie sempre uma pasta local de build (ex: `public`), mova o `index.html` e os ativos para dentro dela, e aponte o deploy para essa pasta executando o comando `npx wrangler pages deploy public --project-name=<nome-do-projeto>`.
 - **Colaboração com Copywriting**: Garantir que o texto do copywriter se integre perfeitamente à hierarquia visual (espaçamento correto dos títulos).
 
 ## 5. Saída do Agente
